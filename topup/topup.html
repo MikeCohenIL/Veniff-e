@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Veniffée - Member Card</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="auth-card">
+  <h1>Member Card</h1>
+
+  <div class="member-card-visual">
+    <p class="card-label">Current Balance</p>
+    <div id="balanceDisplay" class="balance-amount">₪ 0</div>
+    <p class="card-holder" id="cardNameDisplay">Member Name</p>
+  </div>
+
+  <div class="topup-section">
+    <input type="number" id="topupAmount" class="input-field" placeholder="Enter amount to load">
+    <button id="topupBtn" class="action-button">Load Money</button>
+  </div>
+
+  <p id="topupMsg"></p>
+  <a href="dashboard.html" class="nav-link">Back to Dashboard</a>
+</div>
+
+<script src="topup.js"></script>
+</body>
+</html>

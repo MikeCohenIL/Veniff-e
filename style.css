@@ -1,0 +1,231 @@
+body {
+  background-color: #FEFAF6;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  margin: 0;
+  color: #102C57;
+  font-size: 16px;
+}
+
+
+.login-container {
+  background-color: white;
+  padding: 2.5em;
+  border-radius: 1.5em;
+  box-shadow: 0 0.8em 2em rgba(16, 44, 87, 0.1);
+  width: 20em;
+  text-align: center;
+  border: 0.15em solid #DAC0A3;
+}
+
+
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+  color: #102C57;
+}
+
+
+input {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.6em 0;
+  border: 0.1em solid #DAC0A3;
+  border-radius: 0.5em;
+  background-color: #FEFAF6;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+
+button {
+  width: 100%;
+  padding: 0.8em;
+  margin-top: 1.2em;
+  background-color: #102C57;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+
+/* אפקט ה-Hover שנדרש במטלה */
+button:hover {
+  opacity: 0.8;
+}
+
+
+/* עיצוב הקישור עם אפקט Hover */
+.back-link {
+  color: #102C57;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+#msg {
+  color: #cc0000;
+  margin-top: 1.2em;
+  font-size: 0.9em;
+}
+
+/* עיצוב גרפי לכרטיס החבר */
+.member-card-visual {
+  background: #102C57;
+  color: white;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  text-align: left;
+  box-shadow: 0 10px 20px rgba(16, 44, 87, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.card-label {
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin: 0;
+}
+
+
+.balance-amount {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+
+
+.card-holder {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.topup-section {
+  margin-top: 1em;
+}
+
+/*קטגוריות */
+/* קונטיינר רחב יותר לקטגוריות */
+.categories-container {
+  background-color: white;
+  padding: 2em;
+  border-radius: 1.5em;
+  border: 0.15em solid #DAC0A3;
+  width: 90%;
+  max-width: 800px; /* רחב יותר כי יש 2 עמודות */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* יצירת הגריד: 2 עמודות שוות */
+.categories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* שתי עמודות */
+  gap: 1.5em; /* רווח בין המשבצות */
+  margin-top: 2em;
+}
+
+/* עיצוב כל קטגוריה */
+.category-item {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.category-item:hover {
+  transform: scale(1.03); /* אפקט קטן כשמרחפים עם העכבר */
+}
+
+.category-item h3 {
+  margin-bottom: 0.5em;
+  color: #102C57;
+  font-size: 1.2em;
+}
+
+.category-item img {
+  width: 100%;
+  height: 200px; /* גובה אחיד לכל התמונות */
+  object-fit: cover; /* שומר שהתמונה לא תימתח ותיראה טוב */
+  border-radius: 1em;
+  border: 0.1em solid #DAC0A3;
+}
+
+/* --- Media Queries לרספונסיביות --- */
+
+/* דסקטופ */
+@media screen and (min-width: 768px) {
+  .login-container {
+    width: 25em;
+    padding: 3em;
+  }
+}
+
+/* לאייפד (מסכים בינוניים) */
+@media screen and (max-width: 768px) {
+  .categories-container {
+    max-width: 600px;
+  }
+  .category-item img {
+    height: 150px; /* מקטינים קצת את התמונות */
+  }
+}
+
+/* מובייל */
+@media screen and (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 1.5em;
+    /* במובייל נוריד צל ומסגרת למראה נקי */
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+
+  /*כרטיס נטען */
+  .member-card-visual {
+    padding: 1.2em; /* פחות מרווח פנימי בטלפון כדי לחסוך מקום */
+      margin-bottom: 1em;
+    }
+
+    .balance-amount {
+      font-size: 1.8em; /* טקסט קטן יותר בטלפון כדי שלא יירד שורה */
+    }
+
+    .card-holder {
+      font-size: 0.75em; /* הקטנת שם המשתמש למובייל */
+      margin-top: 1em;
+    }
+    /*קטגוריות*/
+  .categories-grid {
+    grid-template-columns: 1fr; /* עמודה אחת בלבד בטלפון כדי שיהיה נוח */
+    gap: 2em;
+  }
+
+  .categories-container {
+    padding: 1em;
+  }
+
+  .category-item img {
+    height: 180px;
+  }
+}
