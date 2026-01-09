@@ -1,0 +1,66 @@
+[
+  {
+    "Username": "JohnDoe",
+    "Email": "john.doe@example.com",
+    "Password": "SecurePassword123",
+    "Balance": "120.50",
+    "PurchaseHistory": [
+      {
+        "Date": "05/12/2025",
+        "ProductName": "Cappuccino",
+        "Category": 1,
+        "Amount": "4.25"
+      },
+      {
+        "Date": "12/12/2025",
+        "ProductName": "Cheese Toast",
+        "Category": 5,
+        "Amount": "7.00"
+      },
+      {
+        "Date": "20/12/2025",
+        "ProductName": "Tuna Sandwich",
+        "Category": 4,
+        "Amount": "8.50"
+      },
+      {
+        "Date": "01/01/2026",
+        "ProductName": "Latte",
+        "Category": 1,
+        "Amount": "4.50"
+      },
+      {
+        "Date": "05/01/2026",
+        "ProductName": "Espresso",
+        "Category": 1,
+        "Amount": "3.00"
+      }
+    ]
+  },
+  {
+    "Username": "JaneSmith",
+    "Email": "jane.smith@example.com",
+    "Password": "CoffeeLover2026",
+    "Balance": "45.00",
+    "PurchaseHistory": [
+      {
+        "Date": "10/12/2025",
+        "ProductName": "Greek Salad",
+        "Category": 3,
+        "Amount": "9.50"
+      },
+      {
+        "Date": "15/12/2025",
+        "ProductName": "Blueberry Muffin",
+        "Category": 2,
+        "Amount": "3.50"
+      },
+      {
+        "Date": "02/01/2026",
+        "ProductName": "Caesar Salad",
+        "Category": 3,
+        "Amount": "10.00"
+      }
+    ]
+  }
+]
