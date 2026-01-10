@@ -62,25 +62,26 @@ body{
     place-items: center;
 
 }
-#clubStatusBlock{
+#balanceBlock{
     grid-area:2/1/3/2;
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid #f0f0f0;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width-min:80%;
+    width-max:auto;
     justify-self: center;
     display: grid;
     place-items: center;
 
 }
-#clubStatusBlock img{
+#balanceBlock img{
     width: 3em;
     height: 3em;
     padding: 0;
     margin: 0;
 }
-#clubStatusBlock :nth-child(3) {
+#balanceBlock :nth-child(3) {
     font-size: 1em;
 }
 #myOrdersBlock{

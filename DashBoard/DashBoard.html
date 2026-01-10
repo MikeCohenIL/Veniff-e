@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Veniffée</title>
     <link rel="stylesheet" href="DashBoardCSS.css">
     <link rel="stylesheet" href="../Header/HeaderCSS.css">
@@ -18,27 +19,33 @@
     </video>
     <div id="DashBoard">
         <div id="helloBlock">
-            <span>Hello, </span>
-            <span> Time is now </span>
+            <span id="HelloUser"></span>
+            <span id="greetingByTime"> Time is now </span>
 
         </div>
         <div id="menuBlock">
             <SPAN>Menu</SPAN>
 
         </div>
-        <div id="clubStatusBlock">
+        <div id="balanceBlock">
             <img src="credit-card.png">
-            <span>Balance:</span>
+            <span id="userBalance">Balance:</span>
             <span >Load Balance</span>
         </div>
         <div id="myOrdersBlock">
             <span>My Orders</span>
+            <ul id="ordersList">
+            </ul>
         </div>
+
         <div id="orderGraphBlock">
             <span>Order Graph</span>
+            <div style="position: relative; height: 70%; width: 95%; margin: auto;">
+                <canvas id="myChart"></canvas>
         </div>
 
 
+    </div>
     </div>
 
 </continer>
