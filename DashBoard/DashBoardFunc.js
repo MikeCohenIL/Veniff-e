@@ -23,6 +23,11 @@ GreetingByTime();
 let balance=document.getElementById("userBalance");
 balance.innerText=`Balance: ${user.Balance}€`;
 
+
+
+
+
+///**load max 5 recent order procsses start here***//
 function loadRecentOrders(){
     let PurchaseHistory=user.PurchaseHistory;
     if(PurchaseHistory.length==0){
@@ -36,7 +41,6 @@ function loadRecentOrders(){
          let ul=document.getElementById("ordersList");
         let stopAt = Math.max(0, PurchaseHistory.length - 5);
 
-// Start at the very end, and go down until we hit the stop point
         for (let i = PurchaseHistory.length - 1; i >= stopAt; i--) {
             let li = document.createElement("li");
             li.textContent = `Date: ${PurchaseHistory[i].Date} ProductName: ${PurchaseHistory[i].ProductName}`;
@@ -46,7 +50,16 @@ function loadRecentOrders(){
 }
 loadRecentOrders();
 
+//**load recent orders ends here**//
 
+
+
+
+
+
+
+
+///***histograma code starts here****///
 
 // 1. Prepare the data for the Chart
 let PurchaseHistory = user.PurchaseHistory;
@@ -58,6 +71,9 @@ for (let i = 0; i < PurchaseHistory.length; i++) {
     // This creates a tally: { "Drinks": 3, "Toasts": 1, etc }
     counts[cat] = (counts[cat] || 0) + 1;
 }
+
+
+
 
 // Create the arrays Chart.js needs
 const labels = Object.keys(counts);    // Example: ["Drinks", "Toasts", "Salads"]
