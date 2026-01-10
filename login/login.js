@@ -1,27 +1,33 @@
 function handleLogin() {
-  // מניח שיש לך ב-HTML של הלוגין IDs כאלה
-  const email = document.getElementById("loginEmail").value;
-  const pass = document.getElementById("loginPass").value;
-  const msg = document.getElementById("errorMsg"); // או שם אחר שנתת להודעה
+    const email = document.getElementById("loginEmail").value;
+    const pass = document.getElementById("loginPass").value;
+    const msg = document.getElementById("errorMsg");
 
-  // 1. שליפת רשימת המשתמשים
-  let users = JSON.parse(localStorage.getItem("users")) || [];
+    fetch('../DataBase/Users.json')
+        .then(res => res.json())
+        .then(users => {
 
-  // 2. חיפוש המשתמש הספציפי
-  // הפונקציה find מחזירה את האובייקט אם נמצא, או undefined אם לא
-  const validUser = users.find(user => user.email === email && user.password === pass);
+            let validUser = null;
 
-  if (validUser) {
-    // 3. לוגין מוצלח: שומרים את המשתמש הנוכחי בנפרד ("session")
-    // זה יעזור לנו בדשבורד לדעת מי מחובר כרגע
-    localStorage.setItem("currentUser", JSON.stringify(validUser));
+            // Use a LOOP to go through the json and seek for a match
+            for (let i = 0; i < users.length; i++) {
+                // Updated to match your JSON keys: Email and Password
+                if (users[i].Email === email && users[i].Password === pass) {
+                    validUser = users[i];
+                    break;
+                }
+            }
 
-      window.location.href = "..\\DashBoard\\DashBoard.html";
-  } else {
-    msg.innerText = "Invalid email or password";
-    msg.style.color = "red";
-  }
+            if (validUser) {
+                localStorage.setItem("currentUser", JSON.stringify(validUser));
+                window.location.href = "../DashBoard/DashBoard.html";
+            } else {
+                msg.innerText = "Invalid email or password";
+                msg.style.color = "red";
+            }
+
+        })
+        .catch(error => console.log("Error Fetching Users.json", error));
 }
 
-// וודאי שהכפתור בלוגין מפעיל את הפונקציה
- document.getElementById("loginBtn").addEventListener("click", handleLogin);
+document.getElementById("loginBtn").addEventListener("click", handleLogin);
