@@ -1,11 +1,13 @@
-// פונקציה להצגת הנתונים בטעינת הדף
+const userData=localStorage.getItem("currentUser");
+const user=JSON.parse(userData);
+
 function initCard() {
   const balanceDisplay = document.getElementById("balanceDisplay");
   const cardNameDisplay = document.getElementById("cardNameDisplay");
 
   // שליפת היתרה והשם מה-LocalStorage
-  const currentBalance = localStorage.getItem("balance") || "0";
-  const fullName = localStorage.getItem("fullName") || "Member";
+  const currentBalance = user.Balance;
+  const fullName = user.Username;
 
   balanceDisplay.innerText = "₪ " + currentBalance;
   cardNameDisplay.innerText = fullName;
@@ -24,10 +26,13 @@ function handleTopup() {
   }
 
   // שליפת היתרה הנוכחית, הוספה ושמירה
-  let currentBalance = parseFloat(localStorage.getItem("balance") || "0");
+  let currentBalance = parseFloat(user.Balance);
   let newBalance = currentBalance + amount;
 
-  localStorage.setItem("balance", newBalance.toString());
+    user.Balance = newBalance.toString();
+
+// 2. Save the updated object back to LocalStorage
+    localStorage.setItem("currentUser", JSON.stringify(user));
 
   // עדכון מיידי של התצוגה
   document.getElementById("balanceDisplay").innerText = "₪ " + newBalance;
