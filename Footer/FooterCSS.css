@@ -7,10 +7,12 @@ body{
     display: grid;
     width: 100%;
     background-color: #DAC0A3;
+
 }
 
 
 #grid-footer{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -50,4 +52,13 @@ h3{
     text-decoration: underline;
     margin-top:2em;
 
+}
+
+@media (max-width: 768px) {
+    #grid-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-items: center;
+    }
 }

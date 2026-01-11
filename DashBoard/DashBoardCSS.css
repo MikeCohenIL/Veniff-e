@@ -12,7 +12,7 @@ a:hover{
 }
 #MainDisplay {
     width: 100%;
-    min-height: 100vh; /* Ensures the display takes at least the full screen height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,3 +122,44 @@ a:hover{
     text-align: center;
 
 }
+
+
+/*Responisev*/
+
+
+/* 2. Laptop / Small Desktop */
+@media (max-width: 1200px) {
+}
+
+/* 3. Tablet */
+@media (max-width: 992px) {
+}
+
+/* 4. Smartphone */
+/* Targets screens smaller than 768px */
+@media (max-width: 768px) {
+
+    #DashBoard {
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        height: 43rem;
+        background-color: rgb(234, 219, 200, 0.8);
+        border: 1px solid #f0f0f0;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        place-items: center;
+
+
+    }
+
+    #helloBlock {
+        width: 50%;
+    }
+    #menuBlock{
+        width:50%;
+    }
+}
+/* 5. Small Smartphone */
+/*@media (max-width: 480px) {
+}*/
