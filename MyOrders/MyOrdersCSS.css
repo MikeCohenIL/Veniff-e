@@ -16,6 +16,7 @@ body{
 }
 
 #MyOrdersContainer{
+    margin: 3em;
     width: 35rem;
     min-height: 10rem;
     background-color: rgb(234, 219, 200,0.8);
@@ -51,4 +52,9 @@ body{
     object-fit: cover;
     z-index: -1;
 }
-
+@media (max-width: 768px) {
+    #MyOrdersContainer{
+        margin: 1em;
+        width: 20em;
+    }
+}
