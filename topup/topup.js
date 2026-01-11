@@ -9,7 +9,7 @@ function initCard() {
   const currentBalance = user.Balance;
   const fullName = user.Username;
 
-  balanceDisplay.innerText = "₪ " + currentBalance;
+  balanceDisplay.innerText = "€ " + currentBalance;
   cardNameDisplay.innerText = fullName;
 }
 
