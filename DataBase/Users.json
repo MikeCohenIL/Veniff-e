@@ -1,8 +1,8 @@
 [
   {
     "Username": "JohnDoe",
-    "Email": "john.doe@example.com",
-    "Password": "SecurePassword123",
+    "Email": "A",
+    "Password": "B",
     "Balance": "120.50",
     "PurchaseHistory": [
       {
