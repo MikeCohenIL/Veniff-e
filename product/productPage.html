@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../categories/productCSS.css">
+    <link rel="stylesheet" href="productCSS.css">
+    <link rel="stylesheet" href="../Header/HeaderCSS.css">
+    <link rel="stylesheet" href="../Footer/FooterCSS.css">
 </head>
 
 <body>
-<div id="productContainer">
+<header id="main-header">
+</header>
+
+
+
+<div id="#MainDisplay">
+    <video autoplay muted loop id="BackgroundVideo">
+        <source src="../DashBoard/Venice_Background.mp4" type="video/mp4">
+    </video>
+
+    <div id="productContainer">
     <div class="productCard">
-        <span class="productName"> upside down coffee </span>
-        <span class="productPrice"> $5.00 </span>
-        <input type="button" class="buyBTN" value="Buy Now">
+
     </div>
-    <div class="productCard"> upside down coffee</div>
-    <div class="productCard"> upside down coffee</div>
-    <div class="productCard"> upside down coffee</div>
 </div>
+</div>
+
+<footer id="main-footer">
+</footer>
+
+<script src="loadProduct.js"></script>
+<script src="../Header/JSfetchHeader.js"></script>
+<script src="../Header/HeaderJS.js"></script>
+<script src="../Footer/JSfetchFooter.js"></script>
 </body>
-
-
 </html>
