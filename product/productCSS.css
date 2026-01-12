@@ -1,8 +1,30 @@
+
+
+#MainDisplay {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 3em;
+}
+#BackgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 #productContainer {
+
     display: grid;
     grid-template-columns: repeat(4, 20em);
     justify-content: center;
-    margin: 0;
+    margin: 2em;
     padding: 0;
 }
 .productCard {
