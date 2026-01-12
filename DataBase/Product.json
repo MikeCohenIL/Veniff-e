@@ -1,0 +1,62 @@
+[
+  {
+    "ProductName": "Espresso Shot",
+    "Id": 1,
+    "Price": "2.50"
+  },
+  {
+    "ProductName": "Caffè Latte",
+    "Id": 1,
+    "Price": "4.25"
+  },
+  {
+    "ProductName": "Iced Americano",
+    "Id": 2,
+    "Price": "3.50"
+  },
+  {
+    "ProductName": "Cold Brew",
+    "Id": 2,
+    "Price": "4.75"
+  },
+  {
+    "ProductName": "Earl Grey Tea",
+    "Id": 3,
+    "Price": "3.25"
+  },
+  {
+    "ProductName": "Matcha Green Tea Latte",
+    "Id": 3,
+    "Price": "5.50"
+  },
+  {
+    "ProductName": "Butter Croissant",
+    "Id": 4,
+    "Price": "3.75"
+  },
+  {
+    "ProductName": "Blueberry Muffin",
+    "Id": 4,
+    "Price": "3.95"
+  },
+  {
+    "ProductName": "Avocado Toast",
+    "Id": 5,
+    "Price": "8.50"
+  },
+  {
+    "ProductName": "Turkey & Swiss Panini",
+    "Id": 5,
+    "Price": "9.25"
+  },
+  {
+    "ProductName": "Whole Bean Roasted Coffee (1lb)",
+    "Id": 6,
+    "Price": "18.00"
+  },
+  {
+    "ProductName": "Stainless Steel Travel Mug",
+    "Id": 6,
+    "Price": "24.95"
+  }
+]
