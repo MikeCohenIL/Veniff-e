@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categories - Veniffée</title>
   <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Header/HeaderCSS.css">
+    <link rel="stylesheet" href="../Footer/FooterCSS.css">
 </head>
 <body>
+<header id="main-header"></header>
 <div class="main-content ">
 <div class="categories-container">
   <h1>Our Menu</h1>
 
   <div class="categories-grid">
-    <div class="category-item" onclick="location.href='toasts.html'">
+    <div class="category-item" data-id="1">
       <h3>Toasts</h3>
       <img src="../images/toast.jpg" alt="toasts">
     </div>
 
-    <div class="category-item" onclick="location.href='pastries.html'">
+    <div class="category-item" data-id="2">
       <h3>Pastries</h3>
       <img src="../images/pastries.jpg" alt="Pastries">
     </div>
-      <div class="category-item" onclick="location.href='Breakfasts.html'">
+      <div class="category-item" data-id="3">
           <h3>Breakfasts</h3>
           <img src="../images/breakfasts.jpg" alt="Breakfasts">
       </div>
 
-    <div class="category-item" onclick="location.href='desserts.html'">
+      <div class="category-item" data-id="4">
       <h3>Desserts</h3>
       <img src="../images/desserts.jpg" alt="Desserts">
     </div>
 
-    <div class="category-item" onclick="location.href='drinks.html'">
+      <div class="category-item" data-id="5">
       <h3> Drinks</h3>
       <img src="../images/drinks.jpg" alt="Drinks">
     </div>
 
-      <div class="category-item" onclick="location.href='sandwiches.html'">
-          <h3>Sandwiches</h3>
+      <div class="category-item" data-id="6">          <h3>Sandwiches</h3>
           <img src="../images/sandwiches.jpg" alt="Sandwiches">
       </div>
   </div>
 
-  <a href="dashboard.html" class="back-link">Back to Dashboard</a>
+  <a href="../DashBoard/DashBoard.html" class="back-link">Back to Dashboard</a>
 </div>
 </div>
+
+<footer id="main-footer"></footer>
+<script src="categories.js"></script>
+<script src="../Header/JSfetchHeader.js"></script>
+<script src="../Header/HeaderJS.js"></script>
+<script src="../Footer/JSfetchFooter.js"></script>
 </body>
 </html>
