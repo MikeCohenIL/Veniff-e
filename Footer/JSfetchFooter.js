@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Only run if the footer container exists on the current page
     if (footerContainer) {
-        fetch('FooterOnly.html')
+        fetch('../Footer/FooterOnly.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Failed to load footer: " + response.statusText);

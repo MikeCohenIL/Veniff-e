@@ -101,3 +101,8 @@ ul{
 ul li{
     padding:0.3em;
 }
+
+.off-screen-menu li:hover{
+font-weight: bold; !important;
+    cursor: pointer; !important;
+}

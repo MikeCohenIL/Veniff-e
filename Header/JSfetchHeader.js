@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const headerContainer = document.getElementById('main-header');
 
-    fetch('HeaderOnly.html')
+    fetch('../Header/HeaderOnly.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error("Failed to load header");
