@@ -76,3 +76,16 @@
     box-shadow: 0 6px 20px rgba(0, 240, 168, 0.4);
 }
 
+
+@media (max-width: 768px) {
+    #productContainer {
+
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        gap: 1em;
+        margin: 2em;
+        padding: 0;
+    }
+
+}
