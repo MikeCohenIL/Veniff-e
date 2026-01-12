@@ -7,18 +7,54 @@
 }
 .productCard {
     font-family: "Segoe UI", Tahoma, sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #102C57;
 
 
     width: 15em;
     height: 15em;
-    text-align: center;
+
     display: grid;
-    place-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 2em;
     background-color: rgb(234, 219, 200, 0.8);
     border: 1px solid #f0f0f0;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
+}
+.productName{
+    font-size: 1.5em;
+}
+.buyBTN {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #1cd49a; /* Your brand green */
+    color: #102C57;
+
+    padding: 10px 24px;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 240, 168, 0.3);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.buyBTN:hover {
+    background-color: #00d695; /* Slightly darker green */
+    transform: translateY(-2px); /* Lifts up slightly */
+    box-shadow: 0 6px 20px rgba(0, 240, 168, 0.4);
+}
+
+
+.buyBTN:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 240, 168, 0.2);
 }
