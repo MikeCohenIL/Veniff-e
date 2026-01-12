@@ -24,6 +24,7 @@
     display: grid;
     grid-template-columns: repeat(4, 20em);
     justify-content: center;
+    gap: 1em;
     margin: 2em;
     padding: 0;
 }
