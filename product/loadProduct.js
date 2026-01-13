@@ -20,7 +20,7 @@ fetch('../DataBase/Product.json')
                 card.innerHTML = `
                     <span class="productName">${product.ProductName}</span>
                     <span class="productPrice">€${product.Price}</span>
-                    <input type="button" class="buyBTN" value="Buy Now">
+                    <input type="button" class="buyBTN" value="Buy Now" onclick="buyNow(this)">
                 `;
 
                 container.appendChild(card);

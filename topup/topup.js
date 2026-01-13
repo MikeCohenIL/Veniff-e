@@ -1,16 +1,16 @@
-const userData=localStorage.getItem("currentUser");
-const user=JSON.parse(userData);
+const userData = localStorage.getItem("user");
+const user = JSON.parse(userData);
 
 function initCard() {
   const balanceDisplay = document.getElementById("balanceDisplay");
   const cardNameDisplay = document.getElementById("cardNameDisplay");
 
   // שליפת היתרה והשם מה-LocalStorage
-  const currentBalance = user.Balance;
-  const fullName = user.Username;
+  const currentBalance = user.balance;
+  const fullName = user.name;
 
-  balanceDisplay.innerText = "€ " + currentBalance;
-  cardNameDisplay.innerText = fullName;
+    balanceDisplay.innerText = "€ " + user.balance
+    cardNameDisplay.innerText = user.name;
 }
 
 function handleTopup() {
@@ -24,21 +24,31 @@ function handleTopup() {
     msg.style.color = "red";
     return;
   }
+    let currentBalance = parseFloat(user.balance);
+  if(amount>=9999999){
+      msg.innerText = "Cannot load a value over 9999999";
+      msg.style.color = "red";
+      return;
+  }
+  if(currentBalance+amount>=9999999){
+      msg.innerText = "Card Limit,Cannot load more money over 9999999";
+      msg.style.color = "red";
+      return;
+  }
 
   // שליפת היתרה הנוכחית, הוספה ושמירה
-  let currentBalance = parseFloat(user.Balance);
+
   let newBalance = currentBalance + amount;
 
-    user.Balance = newBalance.toString();
+    user.balance = newBalance.toString();
+    localStorage.setItem("user", JSON.stringify(user));
 
-// 2. Save the updated object back to LocalStorage
-    localStorage.setItem("currentUser", JSON.stringify(user));
 
   // עדכון מיידי של התצוגה
-  document.getElementById("balanceDisplay").innerText = "₪ " + newBalance;
+  document.getElementById("balanceDisplay").innerText = "€ " + newBalance;
   amountInput.value = ""; // ניקוי השדה
 
-  msg.innerText = "Successfully loaded ₪" + amount;
+  msg.innerText = "Successfully loaded €" + amount;
   msg.style.color = "green";
 }
 

@@ -53,6 +53,10 @@ h3{
     margin-top:2em;
 
 }
+#menu ul li:hover{
+    font-weight: bold;
+    cursor: pointer; !important
+}
 
 @media (max-width: 768px) {
     #grid-footer{
@@ -62,3 +66,4 @@ h3{
         place-items: center;
     }
 }
+

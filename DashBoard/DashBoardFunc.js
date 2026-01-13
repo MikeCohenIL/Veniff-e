@@ -1,8 +1,8 @@
-const userData=localStorage.getItem("currentUser");
-const user=JSON.parse(userData);
+const userData = localStorage.getItem("user");
+const user = JSON.parse(userData);
 
 let HelloUser=document.getElementById("HelloUser");
-HelloUser.innerText=`Hello ${user.Username}!`;
+HelloUser.innerText=`Hello ${user.name}!`;
 
 function GreetingByTime(){
     let now = new Date();
@@ -21,7 +21,7 @@ function GreetingByTime(){
 GreetingByTime();
 
 let balance=document.getElementById("userBalance");
-balance.innerText=`Balance: ${user.Balance}€`;
+balance.innerText=`Balance: ${user.balance}€`;
 
 
 
@@ -32,7 +32,7 @@ function loadRecentOrders(){
     let PurchaseHistory=user.PurchaseHistory;
     if(PurchaseHistory.length==0){
        let spn=document.createElement("span");
-           spn.textContent="NO Purchase History";
+           spn.textContent="No Purchase History";
         document.getElementById("myOrdersBlock").appendChild(spn);
         return;
 
@@ -50,6 +50,42 @@ function loadRecentOrders(){
 }
 loadRecentOrders();
 
+
+//**load Member Status**//
+function Status(){
+    const now = new Date();
+    const monthIndex = now.getMonth();
+    const currentYear = now.getFullYear();
+    const currentMonth = monthIndex + 1;
+    const statusSpan=document.getElementById("status");
+    let orderArr=user.PurchaseHistory;
+    let parts
+    let countOrders=0;
+    if(orderArr.length==0){
+        statusSpan.innerText="No Status";
+        return;
+    }
+    for(let i=0;i<orderArr.length;i++){
+        parts=orderArr[i].Date.split(".");
+
+        if(currentMonth == parseInt(parts[1]) && currentYear == parseInt(parts[2])){
+            countOrders++;
+        }
+    }
+
+    if(countOrders>=10){
+        statusSpan.innerText="GOLD"
+    }
+    else if(countOrders>=5){
+        statusSpan.innerText="SILVER"
+
+    }
+    else
+        statusSpan.innerText="No Status";
+
+}
+Status();
+
 //**load recent orders ends here**//
 
 
@@ -61,60 +97,66 @@ loadRecentOrders();
 
 ///***histograma code starts here****///
 
-// 1. Prepare the data for the Chart
-let PurchaseHistory = user.PurchaseHistory;
-const counts = {};
+function loadChart() {
+    const data = localStorage.getItem("user");
+    if (!data) return;
 
-// Loop through history to count how many of each Category exists
-for (let i = 0; i < PurchaseHistory.length; i++) {
-    const cat = PurchaseHistory[i].Category;
-    // This creates a tally: { "Drinks": 3, "Toasts": 1, etc }
-    counts[cat] = (counts[cat] || 0) + 1;
-}
+    const user = JSON.parse(data);
+    const history = user.PurchaseHistory || [];
 
+    // 1. Define the Map (ID to Name)
+    const idToName = {
+        "1": "Toasts",
+        "2": "Pastries",
+        "3": "Breakfasts",
+        "4": "Desserts",
+        "5": "Drinks",
+        "6": "Sandwiches"
+    };
 
+    const counts = {};
 
+    // 2. Loop through history and count by the NAME instead of the ID
+    history.forEach(order => {
+        // Convert the ID to the English name using our map
+        const categoryName = idToName[order.Id] || "Other";
 
-// Create the arrays Chart.js needs
-const labels = Object.keys(counts);    // Example: ["Drinks", "Toasts", "Salads"]
-const dataValues = Object.values(counts); // Example: [3, 1, 1]
+        counts[categoryName] = (counts[categoryName] || 0) + 1;
+    });
 
-// 2. Now initialize the Chart
-const ctx = document.getElementById('myChart').getContext('2d');
+    const labels = Object.keys(counts);
+    const dataValues = Object.values(counts);
+    const ctx = document.getElementById('myChart').getContext('2d');
 
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: labels,
-        datasets: [{
-            label: 'Orders',
-            data: dataValues,
-            backgroundColor: '#DAC0A3',
-            borderColor: '#102C57',
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: {
-                display: false
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    color: '#102C57',
-                    stepSize: 1
-                }
-            },
-            x: {
-                ticks: {
-                    color: '#102C57'
-                }
-            }
+    if (labels.length > 0) {
+        let chartStatus = Chart.getChart("myChart");
+        if (chartStatus !== undefined) {
+            chartStatus.destroy();
         }
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels, // These will now be "Toasts", "Drinks", etc.
+                datasets: [{
+                    label: 'Items Ordered',
+                    data: dataValues,
+                    backgroundColor: '#DAC0A3',
+                    borderColor: '#102C57',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 }
+                    }
+                }
+            }
+        });
     }
-});
+}
+loadChart();

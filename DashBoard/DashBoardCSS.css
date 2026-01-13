@@ -51,7 +51,20 @@ a:hover{
 
 }
 #helloBlock{
-    grid-area:1/1/2/3;
+    grid-area:1/1/2/2;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);star
+    width: 90%;
+    margin-top: 1rem;
+    justify-self: center;
+    display: grid;
+    place-items: center;
+
+}
+#statusBlock{
+    grid-area:1/2/2/3;
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid #f0f0f0;
     border-radius: 16px;
@@ -87,6 +100,8 @@ a:hover{
     justify-self: center;
     display: grid;
     place-items: center;
+    text-align: center;
+
 
 }
 #balanceBlock img{
@@ -157,6 +172,9 @@ a:hover{
     #helloBlock {
         width: 50%;
     }
+    #statusBlock {
+        width: 50%;
+    }
     #menuBlock{
         width:50%;
     }
@@ -171,6 +189,10 @@ a:hover{
         height: 40rem;
     }
     #helloBlock {
+        width-min:50%;
+        width-max:70%;
+    }
+    #statusBlock{
         width-min:50%;
         width-max:70%;
     }
