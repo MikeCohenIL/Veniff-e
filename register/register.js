@@ -24,9 +24,6 @@ function handleRegister() {
         return;
     }
 
-    // --- החלק המעודכן: אחסון משתמש בודד ---
-
-    // 1. יצירת אובייקט למשתמש החדש
     const newUser = {
         name: name,
         email: email,
@@ -35,7 +32,6 @@ function handleRegister() {
         PurchaseHistory: []
     };
 
-    // 2. שמירה ב-LocalStorage (הפעולה הזו דורסת אוטומטית את מה שהיה תחת המפתח "user")
     localStorage.setItem("user", JSON.stringify(newUser));
 
     msg.innerText = "Registration successful! Previous user data was replaced.";

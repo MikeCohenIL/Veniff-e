@@ -1,0 +1,152 @@
+[
+  {
+    "ProductName": "Smoked Salmon Toast",
+    "Id": 1,
+    "Price": 48,
+    "Date": "12.10.2025"
+  },
+  {
+    "ProductName": "Spicy Tuna Toast",
+    "Id": 1,
+    "Price": 44,
+    "Date": "15.10.2025"
+  },
+  {
+    "ProductName": "Seared Halloumi Sandwich",
+    "Id": 6,
+    "Price": 34,
+    "Date": "22.10.2025"
+  },
+  {
+    "ProductName": "Salmon & Avocado Sandwich",
+    "Id": 6,
+    "Price": 36,
+    "Date": "01.11.2025"
+  },
+  {
+    "ProductName": "Hot Roast Beef Sandwich",
+    "Id": 6,
+    "Price": 42,
+    "Date": "05.11.2025"
+  },
+  {
+    "ProductName": "Mushroom & Onion Omelet",
+    "Id": 3,
+    "Price": 52,
+    "Date": "12.11.2025"
+  },
+  {
+    "ProductName": "Granola Yogurt with Honey",
+    "Id": 3,
+    "Price": 32,
+    "Date": "18.11.2025"
+  },
+  {
+    "ProductName": "Cinnamon Danish",
+    "Id": 2,
+    "Price": 18,
+    "Date": "25.11.2025"
+  },
+  {
+    "ProductName": "Belgian Chocolate Pastry",
+    "Id": 2,
+    "Price": 18,
+    "Date": "30.11.2025"
+  },
+  {
+    "ProductName": "Pesto & Goat Cheese Toast",
+    "Id": 1,
+    "Price": 42,
+    "Date": "02.12.2025"
+  },
+  {
+    "ProductName": "Classic Cheese Toast",
+    "Id": 1,
+    "Price": 38,
+    "Date": "05.12.2025"
+  },
+  {
+    "ProductName": "Smoked Salmon Toast",
+    "Id": 1,
+    "Price": 48,
+    "Date": "10.12.2025"
+  },
+  {
+    "ProductName": "Spicy Tuna Toast",
+    "Id": 1,
+    "Price": 44,
+    "Date": "15.12.2025"
+  },
+  {
+    "ProductName": "Mushroom & Yellow Cheese Toast",
+    "Id": 1,
+    "Price": 40,
+    "Date": "20.12.2025"
+  },
+  {
+    "ProductName": "Classic Cheese Toast",
+    "Id": 1,
+    "Price": 38,
+    "Date": "24.12.2025"
+  },
+  {
+    "ProductName": "Pesto & Goat Cheese Toast",
+    "Id": 1,
+    "Price": 42,
+    "Date": "28.12.2025"
+  },
+  {
+    "ProductName": "Smoked Salmon Toast",
+    "Id": 1,
+    "Price": 48,
+    "Date": "31.12.2025"
+  },
+  {
+    "ProductName": "Spicy Tuna Toast",
+    "Id": 1,
+    "Price": 44,
+    "Date": "02.01.2026"
+  },
+  {
+    "ProductName": "Pesto & Goat Cheese Toast",
+    "Id": 1,
+    "Price": 42,
+    "Date": "04.01.2026"
+  },
+  {
+    "ProductName": "Classic Cheese Toast",
+    "Id": 1,
+    "Price": 38,
+    "Date": "06.01.2026"
+  },
+  {
+    "ProductName": "Classic Cheese Toast",
+    "Id": 1,
+    "Price": 38,
+    "Date": "08.01.2026"
+  },
+  {
+    "ProductName": "Pesto & Goat Cheese Toast",
+    "Id": 1,
+    "Price": 42,
+    "Date": "10.01.2026"
+  },
+  {
+    "ProductName": "Pesto & Goat Cheese Toast",
+    "Id": 1,
+    "Price": 42,
+    "Date": "11.01.2026"
+  },
+  {
+    "ProductName": "Classic Cheese Toast",
+    "Id": 1,
+    "Price": 38,
+    "Date": "12.01.2026"
+  },
+  {
+    "ProductName": "Large Cappuccino",
+    "Id": 5,
+    "Price": 18,
+    "Date": "13.01.2026"
+  }
+]

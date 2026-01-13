@@ -1,0 +1,59 @@
+
+#admin-panel{
+    display:grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: auto 1fr;
+    background-color: #102C57;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 25em;
+    height: auto;
+    gap: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+#admin-panel h3{
+    color: wheat;
+    text-decoration: none;
+    font-size: 2em;
+    width: auto;
+    height: auto;
+
+    margin: 1em;
+}
+#load-jsons{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+input{
+    display: none;
+}
+label{
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: wheat;
+    color: #102C57;
+    padding: 12px 28px;
+    border-radius: 50px; /* Rounded pill shape */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 7em;
+    height: 2em;
+}
+
+@media (max-width: 768px) {
+    #load-jsons{
+        flex-direction: column;
+        place-items: center;
+        gap: 2em;
+    }
+
+}

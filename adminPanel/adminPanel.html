@@ -2,45 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>AdminPanel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="productCSS.css">
     <link rel="stylesheet" href="../Header/HeaderCSS.css">
     <link rel="stylesheet" href="../Footer/FooterCSS.css">
+    <link rel="stylesheet" href="adminStyle.css">
 </head>
-
 <body>
 <header id="main-header">
+
 </header>
 
+<div id="admin-panel">
 
-<div id="balanceDisply">
-    <img src="wallet.png">
-    <span id="currentBalance"></span>
-</div>
+    <h3>Load Jsons</h3>
+    <div id="load-jsons">
+        <label for="fileOrders">Upload Orders</label>
+        <input type="file" name="file" id="fileOrders" onchange="uploadOrders()">
 
-
-
-<div id="#MainDisplay">
-    <video autoplay muted loop id="BackgroundVideo">
-        <source src="../DashBoard/Venice_Background.mp4" type="video/mp4">
-    </video>
-
-    <div id="productContainer">
-    <div class="productCard">
+        <label for="fileMenu">Upload Menu</label>
+        <input type="file" id="fileMenu" onchange="uploadMenu()">
 
     </div>
-</div>
+
 </div>
 
 <footer id="main-footer">
+
 </footer>
-
-
-<script src="loadProduct.js"></script>
 <script src="../Header/JSfetchHeader.js"></script>
 <script src="../Header/HeaderJS.js"></script>
 <script src="../Footer/JSfetchFooter.js"></script>
-<script src="buyProduct.js"></script>
+<script src="uploadJSON.js"></script>
+
 </body>
 </html>

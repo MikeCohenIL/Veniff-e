@@ -2,6 +2,7 @@ function buyNow(btn) {
     const data = localStorage.getItem("user");
     let user = JSON.parse(data);
     const catId=localStorage.getItem("Id");
+    let currentBalance=document.getElementById("currentBalance");
 
 
 
@@ -14,6 +15,7 @@ function buyNow(btn) {
     if (user.balance >= price) {
 
         user.balance -= price;
+        currentBalance.innerHTML = user.balance+" €";
 
         const now = new Date();
         let newPurchase = {

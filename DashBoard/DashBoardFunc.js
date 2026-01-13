@@ -46,6 +46,12 @@ function loadRecentOrders(){
             li.textContent = `Date: ${PurchaseHistory[i].Date} ProductName: ${PurchaseHistory[i].ProductName}`;
             ul.appendChild(li);
         }
+        let lastOrder = PurchaseHistory[PurchaseHistory.length - 1];
+
+        if (lastOrder) {
+            document.getElementById("lastOrderDetails").innerText =
+                `${lastOrder.ProductName} on ${lastOrder.Date} `;
+        }
     }
 }
 loadRecentOrders();

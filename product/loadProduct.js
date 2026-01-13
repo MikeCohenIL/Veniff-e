@@ -1,33 +1,38 @@
-
+const data = localStorage.getItem("user");
+let user = JSON.parse(data);
 const selectedCatId = parseInt(localStorage.getItem('Id'));
 
 const container = document.getElementById('productContainer');
 
-fetch('../DataBase/Product.json')
-    .then(response => {
-        if (!response.ok) throw new Error("Could not load products");
-        return response.json();
-    })
-    .then(allProducts => {
-        container.innerHTML = "";
+// Get products from local storage via the 'products_db' key
+const storedProducts = localStorage.getItem("products_db");
+const allProducts = JSON.parse(storedProducts);
 
-        allProducts.forEach(product => {
-            if (product.Id === selectedCatId) {
+container.innerHTML = "";
 
-                const card = document.createElement('div');
-                card.className = 'productCard';
+allProducts.forEach(product => {
+    if (product.Id === selectedCatId) {
 
-                card.innerHTML = `
-                    <span class="productName">${product.ProductName}</span>
-                    <span class="productPrice">€${product.Price}</span>
-                    <input type="button" class="buyBTN" value="Buy Now" onclick="buyNow(this)">
-                `;
+        const card = document.createElement('div');
+        card.className = 'productCard';
 
-                container.appendChild(card);
-            }
-        });
-        if (container.innerHTML === "") {
-            container.innerHTML = "<p style='color: white;'>No products found in this category.</p>";
-        }
-    })
-    .catch(error => console.error("Error:", error));
+        card.innerHTML = `
+            <span class="productName">${product.ProductName}</span>
+            <span class="productPrice">€${product.Price}</span>
+            <input type="button" class="buyBTN" value="Buy Now" onclick="buyNow(this)">
+        `;
+
+        container.appendChild(card);
+    }
+});
+
+if (container.innerHTML === "") {
+    container.innerHTML = "<p style='color: white;'>No products found in this category.</p>";
+}
+
+function loadBalanceDisplay(){
+    let currentBalance = document.getElementById("currentBalance");
+    currentBalance.innerText = user.balance + " €";
+}
+
+loadBalanceDisplay();

@@ -13,3 +13,7 @@ function OpenCategory(id, url) {
     // 2. Redirect to the page
     window.location.href = url;
 }
+
+function OpenAdmin(url){
+    window.location.href = url;
+}

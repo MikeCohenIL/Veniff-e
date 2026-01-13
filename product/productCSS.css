@@ -1,5 +1,35 @@
+body{
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #102C57;
 
 
+}
+
+
+#balanceDisply{
+    background-color: rgb(234, 219, 200, 0.8);
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width:10em;
+    height:2em;
+    display:flex;
+    margin:1em;
+    gap:5px;
+    justify-content: start;
+    align-items: center;
+
+}
+#balanceDisply img{
+    margin-left:0.5em;
+   width:2em;
+    height:auto;
+}
+#currentBalance{
+    font-size:1.5em;
+    margin-top: auto;
+    margin-bottom: 0;
+}
 #MainDisplay {
     width: 100%;
     min-height: 100vh;
@@ -29,14 +59,9 @@
     padding: 0;
 }
 .productCard {
-    font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: 1.2em;
-    color: #102C57;
-
-
     width: 15em;
     height: 15em;
-
     display: grid;
     align-content: center;
     justify-items: center;
@@ -78,7 +103,14 @@
 
 
 @media (max-width: 768px) {
-    #productContainer {
+    #balanceDisply{
+        position: fixed;
+        margin: 0;
+        font-size: 0.8em;
+
+    }
+
+        #productContainer {
 
         display: flex;
         flex-direction: column;
